@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuickWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cristofer-jeschke" translatesAutoresizingMaskIntoConstraints="NO" id="JdG-ZD-wLf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-9g-MZd">
+                                <rect key="frame" x="0.0" y="94" width="414" height="53"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter your city:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zms-76-6JH">
+                                <rect key="frame" x="122" y="177" width="170" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. London" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Iq-Gi-c4q">
+                                <rect key="frame" x="20" y="215.5" width="374" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="0.39958797089041098" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="0.85265946061643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IIr-wF-dz9"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-NG-nJU">
+                                <rect key="frame" x="167" y="272" width="80" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="0.39958797089999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="40X-66-A6h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="whR-nv-tEC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18n-8O-dC5">
+                                <rect key="frame" x="20" y="401" width="374" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="jyU-Fe-bkv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dqg-9g-MZd" secondAttribute="trailing" id="4m1-oJ-Bbz"/>
+                            <constraint firstAttribute="trailing" secondItem="JdG-ZD-wLf" secondAttribute="trailing" id="5SB-K6-Ot8"/>
+                            <constraint firstItem="18n-8O-dC5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="927-IA-puc"/>
+                            <constraint firstItem="9Iq-Gi-c4q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BVl-fE-9xP"/>
+                            <constraint firstItem="dqg-9g-MZd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IeY-1f-Ejg"/>
+                            <constraint firstAttribute="bottom" secondItem="JdG-ZD-wLf" secondAttribute="bottom" id="VAP-SD-Fco"/>
+                            <constraint firstItem="RRX-NG-nJU" firstAttribute="top" secondItem="9Iq-Gi-c4q" secondAttribute="bottom" constant="20.5" id="VhD-vv-q5m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Iq-Gi-c4q" secondAttribute="trailing" id="ZCO-9B-HYg"/>
+                            <constraint firstItem="dqg-9g-MZd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bMN-Za-6j2"/>
+                            <constraint firstItem="JdG-ZD-wLf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dbP-9F-aIG"/>
+                            <constraint firstItem="9Iq-Gi-c4q" firstAttribute="top" secondItem="zms-76-6JH" secondAttribute="bottom" constant="8" id="h1O-Bq-rDC"/>
+                            <constraint firstItem="RRX-NG-nJU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j9x-fG-yX9"/>
+                            <constraint firstItem="18n-8O-dC5" firstAttribute="top" secondItem="RRX-NG-nJU" secondAttribute="bottom" constant="90" id="mKH-d3-58b"/>
+                            <constraint firstItem="9Iq-Gi-c4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWs-XT-tzb"/>
+                            <constraint firstItem="zms-76-6JH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opt-J1-2MP"/>
+                            <constraint firstItem="zms-76-6JH" firstAttribute="top" secondItem="dqg-9g-MZd" secondAttribute="bottom" constant="30" id="p8B-8b-zAM"/>
+                            <constraint firstItem="JdG-ZD-wLf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pqQ-p8-yc5"/>
+                            <constraint firstItem="dqg-9g-MZd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uZc-Lm-eEW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="18n-8O-dC5" secondAttribute="trailing" id="vWc-06-Vq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="9Iq-Gi-c4q" id="66a-65-JgH"/>
+                        <outlet property="resultLabel" destination="18n-8O-dC5" id="099-AT-G3c"/>
+                        <outlet property="submitBtn" destination="RRX-NG-nJU" id="2Ax-W3-dPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cristofer-jeschke" width="2000" height="3000"/>
+    </resources>
+</document>
